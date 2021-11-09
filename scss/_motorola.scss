@@ -1,0 +1,50 @@
+$celular: motorola ;             /* OPERACIONES, BUCLES Y MAPAS, tambien hay operaciones en el index*/
+$fuente: 40px;
+$vuelta: 1;
+.operaciones {
+        p {
+            @if $celular == motorola {
+                color: red;
+                font-size: $fuente;
+            }
+            @else if $celular == samsung {
+                color: royalblue;
+                font-size: $fuente/2;
+            }
+            @else {
+                color: yellowgreen;
+                font-size: $fuente*4;
+            }
+        }
+}
+
+$lista: red, green, blue, yellow;
+
+@each $color in $lista {
+    .#{$color}{
+        background-color: $color;
+        color: $color;
+    }
+}
+
+@for $i from 2 to 6 {
+    probando_#{$i} { 
+        height: 100em/$i;
+        width: 3em * $i;
+    }
+}
+
+$mapas: (amarillo, verde );
+$mapas1: (rojo, azul );
+
+$mapas2: join($mapas, $mapas1);
+
+.mapa {
+    color: $mapas2;
+    font-size: 3rem;
+}
+
+
+
+
+
