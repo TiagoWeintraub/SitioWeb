@@ -1,71 +1,4 @@
 
-/* HEADER CON FLEXBOX */
-
-header {
-    width: 100%;
-    background: #0b090a;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 10rem;
-    label {
-        display: none;
-        width: 3rem;
-        height: 3rem;
-        margin-right: -6rem;
-        img {
-            width: 3rem;
-        }
-        &:hover {
-            cursor: pointer;
-        }
-    }
-}
-
-#btn-menu {
-    display: none;
-}
-
-.menu {
-    ul{
-        margin: 0;
-        list-style: none;
-        padding: 0;
-        display: flex;
-        li {
-            flex-grow: 1;
-            text-align: center;
-            a {
-                font-size: 2rem;
-                display: block;
-                padding: 1.2em 1.4em;
-                color: #ffff;
-                text-decoration: none;
-                transition: all 0.3s;
-                &:hover {
-                    transform: translate(0, .5rem);
-                    transition: all 0.3s;
-                    text-shadow:  0 0 2rem rgb(167, 10, 133), 0 0 2rem rgb(167, 10, 133), 0 0 2rem rgb(167, 10, 133), 0 0 2rem rgb(167, 10, 133);
-                }
-            }
-        }
-    }
-}
-
-.logo {
-    align-items: center;
-    margin: 0 0 0 -10rem ;
-    width: 7rem;
-    height: 7rem;
-    transition: all 0.3s;
-    &:hover {
-        transform: translate(0, .5rem);
-        transition: all 0.3s;
-        
-    }
-}
-
 /* CONTENEDOR PRINCIPAL CON FLEXBOX*/
 
 .contenedorUno {
@@ -96,6 +29,7 @@ header {
     font-size: 1.5rem;
 
     h1 {
+        margin-top: 0rem;
         font-size: 8rem;
         padding-bottom: 1rem ;
         color: #ffff;
@@ -137,35 +71,6 @@ header {
     100%{margin-top: -0.5rem ;}
 }
 
-/* FOOTER CON FLEXBOX */
-
-footer {
-    grid-area: footer;
-    background-color: #0b090a;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-
-    nav .logoInsta {
-        width: 60px;
-        margin: 15px 30px 15px 15px;
-        transition: all .35s;
-        &:hover {
-            transform: rotateY(180deg);
-            transition: all .35s;
-        }
-        }
-    p {
-    
-    text-align: center;
-    margin: 0 0 0 15rem;
-    font-size: 2rem;
-    color: #ffff;
-    }
-}
-
 /* SECTION DE MARCAS CON GRID*/
 
 .samsung {
@@ -200,19 +105,19 @@ footer {
     font-size: 2rem;
 
     .motorola img {
-        height: 570px;
+        height: 57rem;
         margin-top: 3rem;
         margin-left: -6.2;
     }
     
     .samsung img {
-        height: 550px;
+        height: 55rem;
         margin-top: 3rem;
     }
 
     .apple img {
-        height: 650px;
-        margin-top: 0;
+        height: 53rem;
+        margin: 3rem -5rem 0 -3rem;
     }
 }
 
@@ -264,14 +169,6 @@ footer {
     
 }
 
-.botonLanzamientos {
-    display: inline-block;
-    margin-top: 6rem;
-    background: #06d6a0;
-    padding: 1rem;
-    border-radius: 2rem;
-    cursor: pointer;
-}
 
 .enlaceMarcas {
     text-decoration: none;
@@ -289,100 +186,7 @@ article {
 
 
 @media (max-width:768px) {
-    header {
-        justify-content: space-around;
-        label {
-            display: block;
-        }
-    }
-    
-    .menu {
-        position: absolute;
-        background: #0b090a;
-        width: 100%;
-        margin-right:200%;      /* ACÁ TENGO EL PROBLEMA CON EL CHECKBOX */
-        margin-top: 55rem;
-        ul {
-            flex-direction: column;
-        }
-    }
-    #btn-menu {
-        &:checked ~ .menu {
-            margin-right: 0;
-        }
-    }
-    .botonLanzamientos {
-        margin-top: 1rem;
-    }
 
-    .divMain {
-        margin-bottom: 2rem;
-    }
-
-    .divTituloMarca {
-        margin-top: 0rem;
-        p {
-            margin-top: 0;
-        }
-    }
-    .imagen {
-        
-        &:hover {
-            transform: none;
-            }
-}
-}
-
-@media (max-width:320px) {
-    body {
-        height: auto;
-        max-width: 320px;
-        margin: 0;
-}
-    * {
-        font-size: 50%;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    h2 {
-        ul {
-            li {
-                margin-left: 18rem;
-                font-size: 70%;
-            }
-    }
-    }
-
-    .logo {
-        margin: 0 0 0 -8rem;
-    }
-    
-    header {
-        justify-content: space-around;
-        label {
-            display: block;
-        }
-        
-    }
-    
-    .menu {
-        position: absolute;
-        background: #0b090a;
-        width: 100%;
-        margin-right:200%;      
-        margin-top: 55rem;
-        ul {
-            flex-direction: column;
-        }
-    }
-    #btn-menu {
-        &:checked ~ .menu {
-            margin-right: 0;
-        }
-    }
     .botonLanzamientos {
         margin-top: 1rem;
     }
@@ -390,8 +194,62 @@ article {
     .divMain {
         margin-bottom: 2rem;
         h1 {
-            font-size: 4rem;
-            margin-left: 15rem;
+            margin-top: 5rem;
+        }
+    }
+    .contenedorMarcas {
+        .apple {
+            img {
+                margin: 3rem 20rem 0 20rem ;
+            }
+        }
+    }
+    
+    .divTituloMarca {
+        margin-top: 0rem;
+        p {
+            margin-top: 0;
+        }
+    }
+    .imagen {
+        
+        &:hover {
+            transform: none;
+            }
+}
+    .navbar-toggler {
+        margin-right: 5rem;
+    }
+}
+
+@media (max-width:375px) {
+    header {
+        font-size: 2rem;
+    }
+
+    body {
+        height: auto;
+        width: max-content;
+        max-width: 60rem;
+        margin: 0;
+        font-size: 50%;
+}
+
+    h2 {
+        ul {
+            li {
+                margin-left: 5rem;
+                font-size: 100%;
+            }
+    }
+    }
+
+    .divMain {
+        margin-bottom: 2rem;
+        h1 {
+            font-size: 6rem;
+            margin-left: 6rem;
+            margin-top: 5rem;
         }
     }
 
@@ -402,18 +260,26 @@ article {
         }
     }
     .imagen {
-        width: 37rem;
+        width: 55rem;
         &:hover {
             transform: none;
             }
     }
     
 
-    .botonLanzamientos a {
-        font-size: 100%;
+    .botonLanzamientos {
+        margin-top: 1rem;
+        a {
+            font-size: 100%;
+        }
     }
 
     .contenedorMarcas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        width: max-content;
+        max-width: 60rem;
 
         .divTituloMarca {
             height: 15rem;
@@ -421,24 +287,26 @@ article {
     
         .apple {
             img {
-            height: 45rem;
-            margin-top: 4rem;
+            margin-top: 15rem;
             }
         }
     
         .motorola { 
             img {
-            height: 35rem;
-            margin-top: 14rem;
+            height: 55rem;
+            margin-top: 12rem;
             }
         }
     
         .samsung {
             img {
-            height: 35rem;
+            height: 55rem;
             margin-top: 12rem;
             }
         }
+    }
+    .navbar-toggler {
+        margin-right: 5rem;
     }
     footer {
         p {

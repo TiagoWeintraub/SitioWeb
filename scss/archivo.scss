@@ -11,9 +11,144 @@ html{
     scroll-behavior: smooth;
 }
 
+/* HEADER CON BOOTSTRAP */
+
+header {
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 2rem;
+    background: #0b090a;
+    nav {
+        div {
+            a {
+                list-style: none;
+                transition: all 0.4s !important;
+                text-decoration: none;
+                color: #fff !important;
+                margin-left: 4rem !important;
+                &:hover {
+                    transform: translate(0, .5rem);
+                    transition: all 0.3s;
+                    text-shadow:  0 0 2rem rgb(167, 10, 133), 0 0 2rem rgb(167, 10, 133), 0 0 2rem rgb(167, 10, 133), 0 0 2rem rgb(167, 10, 133);
+            }
+        }
+        }
+    }
+}
+
+.movimientoImg {
+    transition: all 0.4s;
+    &:hover {
+        transform: scale(1.02, 1.02);
+        transition: all .3s;
+    }
+}
+
+.logo {
+    margin-left: 3rem;
+    transition: all 0.3s;
+    &:hover {
+        transform: translate(0, .5rem);
+        transition: all 0.3s;
+    }
+} 
+
+/* FOOTER CON FLEXBOX */
+
+footer {
+    grid-area: footer;
+    background-color: #0b090a;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    nav .logoInsta {
+        width: 60px;
+        margin: 1.5rem 4rem 1.5rem 1.5rem;
+        transition: all .35s;
+        &:hover {
+            transform: rotateY(180deg);
+            transition: all .35s;
+        }
+        }
+    p {
+        text-align: center;
+        margin: 0 0 0 15rem;
+        font-size: 2rem !important;
+        color: #ffff;
+    }
+}
+
+/* BOTONES */
+
+.botonLanzamientos {
+    display: inline-block;
+    margin-top: 6rem;
+    background: #06d6a0;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    a { 
+        color: #fff !important;
+    }
+}
+
+/* PÁGINAS DE PRODUCTOS */
+
+.marcas {
+    
+    align-items: center;
+    grid-area: marcas;
+    text-align: center;
+    h1 {
+        display: block;
+        color: #fff;
+        font-size: 6rem;
+        font-weight: 600;
+    }
+    p {
+        width: 90rem;
+        text-align: center;
+        display: inline-block;
+        color: #fff;
+        font-size: 2.5rem;
+        margin: 2rem;
+        background-color: rgba(0, 0, 0, .6);
+    }
+    .productoPrincipal {
+        text-align: center;
+        color: #fff;
+        font-size: 4rem;
+        margin: 2rem;
+        font-weight: 600;
+        background-color: transparent !important;
+        display: inline-block;
+    }
+}
+
+.productosGeneral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    .info {
+        h2 {
+            font-size: 5rem;
+        }
+        p {
+            font-size: 3.5rem;
+        }
+        a {
+            font-size: 2.5rem;
+        }
+    }
+}
+
 @import "index";
-@import "contacto";
-/* @import "motorola"; */
+@import "nosotros";
+@import "motorola";
 @import "apple";
 @import "samsung";
-@import "error";
+@import "error"; 

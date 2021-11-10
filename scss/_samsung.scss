@@ -1,0 +1,161 @@
+.marcaProductos3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "marcas marcas marcas"
+      "productoSam1 productoSam1 productoSam1"
+      "productoSam2 productoSam2 productoSam2"
+      "productoSam3 productoSam3 productoSam3"
+      "footer footer footer";
+  }
+  
+.h1Sam {
+    margin: 7rem 1rem 1rem 1.5rem;
+}
+.imgSam1{
+    width: 40rem;
+}
+.imgSam2{
+    width: 53rem;
+}
+.imgSam3{
+    width: 55rem;
+    margin: 0 -10rem 0 -5rem;
+}
+
+.marcasSam {
+    background-image: url(../multimedia/fondoOscuro.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+  .productoSam1 { 
+    grid-area: productoSam1;
+    background-image: url(../multimedia/fondoVioleta.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+  .productoSam2 { 
+    grid-area: productoSam2;
+    background-image: url(../multimedia/fondoAzul.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+  .productoSam3 { 
+    grid-area: productoSam3;
+    background-image: url(../multimedia/fondoGalaxia.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+  .infoAcomodar {
+      margin: 2rem 0 0 15rem;
+  }
+
+  .info {
+    h2 {
+        font-size: 5rem;
+        color: #fff;
+    }
+    p {
+        font-size: 3.5rem;
+        color: #fff;
+    }
+    a {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+}
+
+
+
+
+@media (max-width:768px) {
+    header {
+        font-size: 3rem;
+    }
+    .marcaProductos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
+        gap: 0px 0px;
+        width: max-content;
+        max-width: 150rem;
+      }
+    
+    body {
+        height: auto;
+        width: max-content;
+        max-width: 150rem;
+    }
+    .botonLanzamientos {
+        margin-top: 1rem;
+    }
+
+    .productoSam1 {
+        .info {
+            margin:0 10rem 0 0rem;
+        }
+    }
+    .infoAcomodar {
+        margin: 7rem 0 0 0 ;
+
+
+    .navbar-toggler {
+        margin-right: 5rem;
+    }
+}
+}
+
+@media (max-width:375px) {
+    html {
+        width: max-content;
+        max-width: 100rem;
+    }
+    header {
+        font-size: 3rem;
+    }
+    .marcaProductos {
+        width: max-content;
+        max-width: 100rem;
+      }
+    
+    body {
+        height: auto;
+        width: max-content;
+        max-width: 100rem;
+        margin: 0;
+        font-size: 50%;
+}
+}
+.productoSam1 {
+    .info {
+        margin:0 10rem ;
+    }
+    img {
+        margin:-5rem 0 0 0 ;
+    }
+}
+.infoAcomodar {
+    margin: 7rem 0 0 0 ;
+}
+.imgSam3 {
+    margin: 0 10rem 0 10rem;
+}
+    footer {
+        p {
+            font-size: 1.5rem;
+            margin: 0 0 0 2rem;
+        }
+    }
+
+
+
+

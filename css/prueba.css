@@ -10,57 +10,107 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
 
-/* HEADER CON FLEXBOX */
+/* HEADER CON BOOTSTRAP */
 header {
-  width: 100%;
-  background: #0b090a;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 10rem; }
-  header label {
-    display: none;
-    width: 3rem;
-    height: 3rem;
-    margin-right: -6rem; }
-    header label img {
-      width: 3rem; }
-    header label:hover {
-      cursor: pointer; }
+  font-family: 'Noto Sans Display', sans-serif;
+  font-size: 2rem;
+  background: #0b090a; }
+  header nav div a {
+    list-style: none;
+    transition: all 0.4s !important;
+    text-decoration: none;
+    color: #fff !important;
+    margin-left: 4rem !important; }
+    header nav div a:hover {
+      transform: translate(0, 0.5rem);
+      transition: all 0.3s;
+      text-shadow: 0 0 2rem #a70a85, 0 0 2rem #a70a85, 0 0 2rem #a70a85, 0 0 2rem #a70a85; }
 
-#btn-menu {
-  display: none; }
-
-.menu ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  display: flex; }
-  .menu ul li {
-    flex-grow: 1;
-    text-align: center; }
-    .menu ul li a {
-      font-size: 2rem;
-      display: block;
-      padding: 1.2em 1.4em;
-      color: #ffff;
-      text-decoration: none;
-      transition: all 0.3s; }
-      .menu ul li a:hover {
-        transform: translate(0, 0.5rem);
-        transition: all 0.3s;
-        text-shadow: 0 0 2rem #a70a85, 0 0 2rem #a70a85, 0 0 2rem #a70a85, 0 0 2rem #a70a85; }
+.movimientoImg {
+  transition: all 0.4s; }
+  .movimientoImg:hover {
+    transform: scale(1.02, 1.02);
+    transition: all .3s; }
 
 .logo {
-  align-items: center;
-  margin: 0 0 0 -10rem;
-  width: 7rem;
-  height: 7rem;
+  margin-left: 3rem;
   transition: all 0.3s; }
   .logo:hover {
     transform: translate(0, 0.5rem);
     transition: all 0.3s; }
+
+/* FOOTER CON FLEXBOX */
+footer {
+  grid-area: footer;
+  background-color: #0b090a;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; }
+  footer nav .logoInsta {
+    width: 60px;
+    margin: 1.5rem 4rem 1.5rem 1.5rem;
+    transition: all .35s; }
+    footer nav .logoInsta:hover {
+      transform: rotateY(180deg);
+      transition: all .35s; }
+  footer p {
+    text-align: center;
+    margin: 0 0 0 15rem;
+    font-size: 2rem !important;
+    color: #ffff; }
+
+/* BOTONES */
+.botonLanzamientos {
+  display: inline-block;
+  margin-top: 6rem;
+  background: #06d6a0;
+  padding: 1rem;
+  border-radius: 2rem;
+  cursor: pointer; }
+  .botonLanzamientos a {
+    color: #fff !important; }
+
+/* PÁGINAS DE PRODUCTOS */
+.marcas {
+  align-items: center;
+  grid-area: marcas;
+  text-align: center; }
+  .marcas h1 {
+    display: block;
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 600; }
+  .marcas p {
+    width: 90rem;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 2rem;
+    background-color: rgba(0, 0, 0, 0.6); }
+  .marcas .productoPrincipal {
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    margin: 2rem;
+    font-weight: 600;
+    background-color: transparent !important;
+    display: inline-block; }
+
+.productosGeneral {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center; }
+  .productosGeneral .info h2 {
+    font-size: 5rem; }
+  .productosGeneral .info p {
+    font-size: 3.5rem; }
+  .productosGeneral .info a {
+    font-size: 2.5rem; }
 
 /* CONTENEDOR PRINCIPAL CON FLEXBOX*/
 .contenedorUno {
@@ -88,6 +138,7 @@ header {
   font-size: 1.5rem;
   /* OPERACIONES CON UNA VARIABLE */ }
   .divMain h1 {
+    margin-top: 0rem;
     font-size: 8rem;
     padding-bottom: 1rem;
     color: #ffff;
@@ -124,28 +175,6 @@ header {
   100% {
     margin-top: -0.5rem; } }
 
-/* FOOTER CON FLEXBOX */
-footer {
-  grid-area: footer;
-  background-color: #0b090a;
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center; }
-  footer nav .logoInsta {
-    width: 60px;
-    margin: 15px 30px 15px 15px;
-    transition: all .35s; }
-    footer nav .logoInsta:hover {
-      transform: rotateY(180deg);
-      transition: all .35s; }
-  footer p {
-    text-align: center;
-    margin: 0 0 0 15rem;
-    font-size: 2rem;
-    color: #ffff; }
-
 /* SECTION DE MARCAS CON GRID*/
 .samsung {
   grid-area: sam;
@@ -170,15 +199,15 @@ footer {
   grid-template-areas: "moto moto" "apple apple" "sam sam" "footer footer";
   font-size: 2rem; }
   .contenedorMarcas .motorola img {
-    height: 570px;
+    height: 57rem;
     margin-top: 3rem;
     margin-left: -6.2; }
   .contenedorMarcas .samsung img {
-    height: 550px;
+    height: 55rem;
     margin-top: 3rem; }
   .contenedorMarcas .apple img {
-    height: 650px;
-    margin-top: 0; }
+    height: 53rem;
+    margin: 3rem -5rem 0 -3rem; }
 
 .fotoMarca {
   transition: all .35s;
@@ -221,14 +250,6 @@ footer {
   background-position: center;
   background-attachment: fixed; }
 
-.botonLanzamientos {
-  display: inline-block;
-  margin-top: 6rem;
-  background: #06d6a0;
-  padding: 1rem;
-  border-radius: 2rem;
-  cursor: pointer; }
-
 .enlaceMarcas {
   text-decoration: none;
   list-style: none; }
@@ -240,119 +261,496 @@ article {
     padding: 1.6rem; }
 
 @media (max-width: 768px) {
-  header {
-    justify-content: space-around; }
-    header label {
-      display: block; }
-  .menu {
-    position: absolute;
-    background: #0b090a;
-    width: 100%;
-    margin-right: 200%;
-    /* ACÁ TENGO EL PROBLEMA CON EL CHECKBOX */
-    margin-top: 55rem; }
-    .menu ul {
-      flex-direction: column; }
-  #btn-menu:checked ~ .menu {
-    margin-right: 0; }
-  .botonLanzamientos {
-    margin-top: 1rem; }
-  .divMain {
-    margin-bottom: 2rem; }
-  .divTituloMarca {
-    margin-top: 0rem; }
-    .divTituloMarca p {
-      margin-top: 0; }
-  .imagen:hover {
-    transform: none; } }
-
-@media (max-width: 320px) {
-  body {
-    height: auto;
-    max-width: 320px;
-    margin: 0; }
-  * {
-    font-size: 50%; }
-  h1 {
-    font-size: 4rem; }
-  h2 ul li {
-    margin-left: 18rem;
-    font-size: 70%; }
-  .logo {
-    margin: 0 0 0 -8rem; }
-  header {
-    justify-content: space-around; }
-    header label {
-      display: block; }
-  .menu {
-    position: absolute;
-    background: #0b090a;
-    width: 100%;
-    margin-right: 200%;
-    margin-top: 55rem; }
-    .menu ul {
-      flex-direction: column; }
-  #btn-menu:checked ~ .menu {
-    margin-right: 0; }
   .botonLanzamientos {
     margin-top: 1rem; }
   .divMain {
     margin-bottom: 2rem; }
     .divMain h1 {
-      font-size: 4rem;
-      margin-left: 15rem; }
+      margin-top: 5rem; }
+  .contenedorMarcas .apple img {
+    margin: 3rem 20rem 0 20rem; }
+  .divTituloMarca {
+    margin-top: 0rem; }
+    .divTituloMarca p {
+      margin-top: 0; }
+  .imagen:hover {
+    transform: none; }
+  .navbar-toggler {
+    margin-right: 5rem; } }
+
+@media (max-width: 375px) {
+  header {
+    font-size: 2rem; }
+  body {
+    height: auto;
+    width: max-content;
+    max-width: 60rem;
+    margin: 0;
+    font-size: 50%; }
+  h2 ul li {
+    margin-left: 5rem;
+    font-size: 100%; }
+  .divMain {
+    margin-bottom: 2rem; }
+    .divMain h1 {
+      font-size: 6rem;
+      margin-left: 6rem;
+      margin-top: 5rem; }
   .divTituloMarca {
     margin-top: 0rem; }
     .divTituloMarca p {
       margin-top: 0; }
   .imagen {
-    width: 37rem; }
+    width: 55rem; }
     .imagen:hover {
       transform: none; }
-  .botonLanzamientos a {
-    font-size: 100%; }
-  .contenedorMarcas .divTituloMarca {
-    height: 15rem; }
-  .contenedorMarcas .apple img {
-    height: 45rem;
-    margin-top: 4rem; }
-  .contenedorMarcas .motorola img {
-    height: 35rem;
-    margin-top: 14rem; }
-  .contenedorMarcas .samsung img {
-    height: 35rem;
-    margin-top: 12rem; }
+  .botonLanzamientos {
+    margin-top: 1rem; }
+    .botonLanzamientos a {
+      font-size: 100%; }
+  .contenedorMarcas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: max-content;
+    max-width: 60rem; }
+    .contenedorMarcas .divTituloMarca {
+      height: 15rem; }
+    .contenedorMarcas .apple img {
+      margin-top: 15rem; }
+    .contenedorMarcas .motorola img {
+      height: 55rem;
+      margin-top: 12rem; }
+    .contenedorMarcas .samsung img {
+      height: 55rem;
+      margin-top: 12rem; }
+  .navbar-toggler {
+    margin-right: 5rem; }
   footer p {
     font-size: 1.5rem;
     margin: 0 0 0 2rem; } }
 
-.contenedorContacto {
-  height: 50rem;
-  width: 100vw;
-  background-image: url(https://www.lavoz.com.ar/resizer/Jp5Fi2RmjKe03HEbDJtadbTappE=/1023x682/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/DGN73Z2CJFB3LELUNXH7T6W2QE.jpg);
-  background-position: center;
+body {
+  background-image: url(../multimedia/fondoNosotros.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffff; }
-  .contenedorContacto form {
-    background: #a09e9e;
-    height: 30rem;
-    width: 60rem;
-    padding: 1rem;
-    border: 0.3rem black solid;
-    display: inline-block;
-    font-size: 1.5rem; }
-  .contenedorContacto .formContacto {
-    margin: .8rem; }
-  .contenedorContacto .btn {
-    margin: 1rem 0 0 45%; }
+  background-attachment: fixed; }
 
-/* @import "motorola"; */
-.bodyCarru {
-  background: grey; }
+.footerNos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "footer footer footer"; }
+
+.footer {
+  grid-area: footer; }
+
+nav .logoInsta {
+  width: 60px;
+  margin: 1.5rem 4rem 1.5rem 1.5rem;
+  transition: all .35s; }
+  nav .logoInsta:hover {
+    transform: rotateY(180deg);
+    transition: all .35s; }
+
+p {
+  text-align: center;
+  margin: 0 0 0 15rem;
+  font-size: 2rem !important;
+  color: #ffff; }
+
+.contenedorNosotros {
+  height: 100vh;
+  text-align: center; }
+  .contenedorNosotros h1 {
+    margin: 5rem 0 3rem 0;
+    display: block;
+    font-size: 5rem;
+    color: #fff; }
+  .contenedorNosotros .contenedorPresentación {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center; }
+    .contenedorNosotros .contenedorPresentación p {
+      margin: 3rem 5rem 3rem 5rem;
+      font-size: 2.5rem;
+      color: #fff; }
+
+@media (max-width: 375px) {
+  html {
+    width: max-content;
+    max-width: 37.5rem; }
+  header {
+    font-size: 3rem; }
+  .contenedorNosotros h1 {
+    margin: 3rem; }
+  .contenedorPresentación {
+    margin: 0; }
+  footer p {
+    font-size: 1.5rem;
+    margin: 0 0 0 2rem; } }
+
+.marcaProductos2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "marcas marcas marcas" "productoMoto1 productoMoto1 productoMoto1" "productoMoto2 productoMoto2 productoMoto2" "productoMoto3 productoMoto3 productoMoto3" "footer footer footer"; }
+
+.h1Moto {
+  margin: 7rem 1rem 1rem 1.5rem; }
+
+.imgMoto1 {
+  width: 65rem; }
+
+.imgMoto2 {
+  width: 75rem; }
+
+.imgMoto3 {
+  width: 50rem; }
+
+.marcasMoto {
+  background-image: url(../multimedia/fondoOsc2.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.productoMoto1 {
+  grid-area: productoMoto1;
+  background-image: url(../multimedia/fondo-naranja-textura.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .productoMoto1 img {
+    margin-top: 5rem; }
+
+.productoMoto2 {
+  grid-area: productoMoto2;
+  background-image: url(../multimedia/fondoOsc2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.productoMoto3 {
+  grid-area: productoMoto3;
+  background-image: url(../multimedia/fondoApple3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.infoAcomodar {
+  margin: 2rem 0 0 15rem; }
+
+.info h2 {
+  font-size: 5rem;
+  color: #fff; }
+
+.info p {
+  font-size: 3.5rem;
+  color: #fff; }
+
+.info a {
+  font-size: 2.5rem;
+  color: #fff; }
+
+@media (max-width: 768px) {
+  header {
+    font-size: 3rem; }
+  .marcaProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
+    gap: 0px 0px;
+    width: max-content;
+    max-width: 150rem; }
+  body {
+    height: auto;
+    width: max-content;
+    max-width: 150rem; }
+  .botonLanzamientos {
+    margin-top: 1rem; }
+  .productoMoto1 .info {
+    margin: 0 10rem 0 0rem; }
+  .infoAcomodar {
+    margin: 7rem 0 0 0; }
+    .infoAcomodar .navbar-toggler {
+      margin-right: 5rem; } }
+
+@media (max-width: 375px) {
+  html {
+    width: 375px;
+    max-width: 375px; }
+  header {
+    font-size: 3rem; }
+  .marcaProductos {
+    width: max-content;
+    max-width: 100rem; }
+  body {
+    height: auto;
+    width: max-content;
+    max-width: 375px;
+    margin: 0;
+    font-size: 50%; } }
+
+.productoMoto1 .info {
+  margin: 0 10rem; }
+
+.productoMoto1 img {
+  margin: -5rem 0 0 0; }
+
+.infoAcomodar {
+  margin: 7rem 0 0 0; }
+
+.imgMoto3 {
+  margin: 0 10rem 0 10rem; }
+
+footer p {
+  font-size: 1.5rem;
+  margin: 0 0 0 2rem; }
+
+.marcaProductos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.95fr 1fr 1fr 1fr 1fr .05fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "marcas marcas marcas" "producto1 producto1 producto1" "producto2 producto2 producto2" "producto3 producto3 producto3" "producto4 producto4 producto4" "footer footer footer"; }
+
+.h1Apple {
+  margin: 7rem 1rem 1rem 1.5rem; }
+
+.imgProdIphone13 {
+  width: 45rem !important; }
+
+.imgProducto {
+  width: 70rem; }
+
+.imgProducto2 {
+  width: 80rem; }
+
+.marcasApple {
+  background-image: url(https://www.gadgetsinnepal.com.np/wp-content/uploads/2021/09/iPhone-13-mini-official-price-in-Nepal-1-1200x688.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.producto1 {
+  grid-area: producto1;
+  background-image: url(../multimedia/fondoApple1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.producto2 {
+  grid-area: producto2;
+  background-image: url(../multimedia/fondoApple2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.producto3 {
+  grid-area: producto3;
+  background-image: url(../multimedia/fondoApple3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.producto4 {
+  grid-area: producto4;
+  background-image: url(../multimedia/fondoApple4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.infoAcomodar {
+  margin: 2rem 0 0 15rem; }
+
+.info h2 {
+  font-size: 5rem;
+  color: #fff; }
+
+.info p {
+  font-size: 3.5rem;
+  color: #fff; }
+
+.info a {
+  font-size: 2.5rem;
+  color: #fff; }
+
+@media (max-width: 768px) {
+  header {
+    font-size: 3rem; }
+  .marcaProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.95fr 1fr 1fr 1fr 1fr .05fr;
+    gap: 0px 0px;
+    width: max-content;
+    max-width: 150rem; }
+  body {
+    height: auto;
+    width: max-content;
+    max-width: 150rem; }
+  .botonLanzamientos {
+    margin-top: 1rem; }
+  .producto1 .info {
+    margin: 0 10rem !important; }
+  .producto1 img {
+    margin: -10rem 10rem 0 10rem !important; }
+  .infoAcomodar {
+    margin: 7rem 0 0 0; }
+  .imgProducto2 {
+    margin-top: -15rem; }
+  .navbar-toggler {
+    margin-right: 5rem; } }
+
+@media (max-width: 375px) {
+  html {
+    width: max-content;
+    max-width: 100rem; }
+  header {
+    font-size: 3rem; }
+  .marcaProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.95fr 1fr 1fr 1fr 1fr .05fr;
+    gap: 0px 0px;
+    width: max-content;
+    max-width: 100rem; }
+  body {
+    height: auto;
+    width: max-content;
+    max-width: 100rem;
+    margin: 0;
+    font-size: 50%; }
+  .producto1 .info {
+    margin: 0 10rem !important; }
+  .producto1 img {
+    margin: -10rem 10rem 0 10rem !important; }
+  .infoAcomodar {
+    margin: 7rem 0 0 0; }
+  .imgProducto2 {
+    margin-top: -15rem; }
+  footer p {
+    font-size: 1.5rem;
+    margin: 0 0 0 2rem; } }
+
+.marcaProductos3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "marcas marcas marcas" "productoSam1 productoSam1 productoSam1" "productoSam2 productoSam2 productoSam2" "productoSam3 productoSam3 productoSam3" "footer footer footer"; }
+
+.h1Sam {
+  margin: 7rem 1rem 1rem 1.5rem; }
+
+.imgSam1 {
+  width: 40rem; }
+
+.imgSam2 {
+  width: 53rem; }
+
+.imgSam3 {
+  width: 55rem;
+  margin: 0 -10rem 0 -5rem; }
+
+.marcasSam {
+  background-image: url(../multimedia/fondoOscuro.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.productoSam1 {
+  grid-area: productoSam1;
+  background-image: url(../multimedia/fondoVioleta.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.productoSam2 {
+  grid-area: productoSam2;
+  background-image: url(../multimedia/fondoAzul.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.productoSam3 {
+  grid-area: productoSam3;
+  background-image: url(../multimedia/fondoGalaxia.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.infoAcomodar {
+  margin: 2rem 0 0 15rem; }
+
+.info h2 {
+  font-size: 5rem;
+  color: #fff; }
+
+.info p {
+  font-size: 3.5rem;
+  color: #fff; }
+
+.info a {
+  font-size: 2.5rem;
+  color: #fff; }
+
+@media (max-width: 768px) {
+  header {
+    font-size: 3rem; }
+  .marcaProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
+    gap: 0px 0px;
+    width: max-content;
+    max-width: 150rem; }
+  body {
+    height: auto;
+    width: max-content;
+    max-width: 150rem; }
+  .botonLanzamientos {
+    margin-top: 1rem; }
+  .productoSam1 .info {
+    margin: 0 10rem 0 0rem; }
+  .infoAcomodar {
+    margin: 7rem 0 0 0; }
+    .infoAcomodar .navbar-toggler {
+      margin-right: 5rem; } }
+
+@media (max-width: 375px) {
+  html {
+    width: max-content;
+    max-width: 100rem; }
+  header {
+    font-size: 3rem; }
+  .marcaProductos {
+    width: max-content;
+    max-width: 100rem; }
+  body {
+    height: auto;
+    width: max-content;
+    max-width: 100rem;
+    margin: 0;
+    font-size: 50%; } }
+
+.productoSam1 .info {
+  margin: 0 10rem; }
+
+.productoSam1 img {
+  margin: -5rem 0 0 0; }
+
+.infoAcomodar {
+  margin: 7rem 0 0 0; }
+
+.imgSam3 {
+  margin: 0 10rem 0 10rem; }
+
+footer p {
+  font-size: 1.5rem;
+  margin: 0 0 0 2rem; }
 
 .contenedor404 h1 {
   text-align: center;

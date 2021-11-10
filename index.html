@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Te contamos todo sobre los mejores celulares de las mejores marcas"><!-- AGREGUÉ ACÁ -->
+    <meta name="description" content="Te contamos todo sobre los mejores celulares de las mejores marcas">
     <meta name="keywords" content="Motrola, Apple, Samsung, celulares, Smartphones, iphone, galaxy, moto">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300&display=swap" rel="stylesheet">
     <title>TWsmartphones, los mejores celulares</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/prueba.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="multimedia/logoBlanco.png" alt="Logo TW">    
-        <nav class="menu">
-                <ul>
-                    <li class="item"><a href="index.html">Inicio</a></li>
-                    <li class="item"><a href="pages/motorola.html">Motorola</a></li>
-                    <li class="item"><a href="pages/apple.html">Apple</a></li>
-                    <li class="item"><a href="pages/samsung.html">Samsung</a></li>
-                    <li class="item"><a href="">Quienes somos</a></li>
-                    <li class="item"><a href="pages/contacto.html">Contacto</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light navbar navbar-dark navbar-toggeable-sm sticky-top">
+          <a class="navbar-brand" href="index.html">
+            <img class="logo" src="multimedia/logoBlanco.png" width="70" height="70" alt="Logo TWsmartphones">
+          </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-center">
+              <a class="nav-item nav-link active" href="index.html">Inicio</a>
+              <a class="nav-item nav-link" href="pages/motorola.html">Motorola</a>
+              <a class="nav-item nav-link " href="pages/apple.html">Apple</a>
+              <a class="nav-item nav-link" href="pages/samsung.html">Samsung</a>
+              <a class="nav-item nav-link" href="pages/nosotros.html">Nosotros</a>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <a class="btn" href="https://www.whatsapp.com/?lang=es">
+                <img src="https://es.logodownload.org/wp-content/uploads/2018/10/whatsapp-logo-11.png" width="25" height="25" alt="whatsapp">
+              </a>
+            </div>
+          </div>
         </nav>
-        <input type="checkbox" id="btn-menu">
-        <label for="btn-menu"><img class="barras" src="multimedia/iconoMenu.png" alt="Barras menu"></label>
-        </header>
+    </header>
         <section class="contenedorUno">
             <div class="divMain">
                 <h1>TW Smartphones</h1>
@@ -48,24 +58,24 @@
         </section>
         <section id="marcasID" class="contenedorMarcas">
         <article class="apple">
-            <a href="pages/apple.html"><img class="fotoMarca" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1631220221000" alt="Iphone 13"></a>
+            <a href="pages/apple.html"><img class="fotoMarca" src="multimedia/iphone13.png" alt="Iphone 13"></a>
             <div class="divTituloMarca">
                 <a class="enlaceMarcas" href="pages/apple.html"><h3 class="generalH3">Apple</h3></a>
                 <p>Muy muy Pro</p>
                 <div class="botonLanzamientos">
-                    <a>Ver los nuevos lanzamientos</a>
+                    <a href="pages/apple.html">Ver los nuevos lanzamientos</a>
                 </div>
             </div>
         </article>
         <article class="samsung"> 
             <div class="divTituloMarca">
-                <a class="enlaceMarcas" href=""><h3 class="samH3">Samsung</h3></a>
+                <a class="enlaceMarcas" href="pages/samsung.html"><h3 class="samH3">Samsung</h3></a>
                 <p>Resolución épica de 108MP</p>
                 <div class="botonLanzamientos">
-                    <a>Ver los nuevos lanzamientos</a>
+                    <a href="pages/samsung.html">Ver los nuevos lanzamientos</a>
                 </div>
             </div>
-            <a><img class="fotoMarca" src="multimedia/S21.png" alt="Galaxy S21"></a>
+            <a href="pages/samsung.html"><img class="fotoMarca" src="multimedia/S21.png" alt="Galaxy S21"></a>
         </article>
         <article class="motorola">
             <div class="divTituloMarca">
@@ -85,6 +95,9 @@
             <a href="https://www.instagram.com/"><img class="logoInsta" src="multimedia/logo-minimalist-instagram.png" alt="logo instagram"></a>
         </nav>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
 

@@ -1,4 +1,176 @@
-
-.bodyCarru {
-    background: grey;
+.marcaProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.95fr 1fr 1fr 1fr 1fr .05fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "marcas marcas marcas"
+      "producto1 producto1 producto1"
+      "producto2 producto2 producto2"
+      "producto3 producto3 producto3"
+      "producto4 producto4 producto4"
+      "footer footer footer";
+  }
+  
+.h1Apple {
+    margin: 7rem 1rem 1rem 1.5rem;
 }
+
+.imgProdIphone13 {
+    width: 45rem !important;
+}
+.imgProducto {
+    width: 70rem;
+}
+.imgProducto2 {
+    width: 80rem;
+}
+
+.marcasApple {
+    background-image: url(https://www.gadgetsinnepal.com.np/wp-content/uploads/2021/09/iPhone-13-mini-official-price-in-Nepal-1-1200x688.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+  .producto1 { 
+    grid-area: producto1;
+    background-image: url(../multimedia/fondoApple1.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+  .producto2 { 
+    grid-area: producto2;
+    background-image: url(../multimedia/fondoApple2.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+  .producto3 { 
+    grid-area: producto3;
+    background-image: url(../multimedia/fondoApple3.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+  .producto4 { 
+    grid-area: producto4;
+    background-image: url(../multimedia/fondoApple4.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+  .infoAcomodar {
+      margin: 2rem 0 0 15rem;
+  }
+
+  .info {
+    h2 {
+        font-size: 5rem;
+        color: #fff;
+    }
+    p {
+        font-size: 3.5rem;
+        color: #fff;
+    }
+    a {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+}
+
+
+
+
+@media (max-width:768px) {
+    header {
+        font-size: 3rem;
+    }
+    .marcaProductos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.95fr 1fr 1fr 1fr 1fr .05fr;
+        gap: 0px 0px;
+        width: max-content;
+        max-width: 150rem;
+      }
+    
+    body {
+        height: auto;
+        width: max-content;
+        max-width: 150rem;
+    }
+    .botonLanzamientos {
+        margin-top: 1rem;
+    }
+
+    .producto1 {
+        .info {
+            margin:0 10rem !important;
+        }
+        img {
+            margin:-10rem 10rem 0 10rem !important;
+        }
+    }
+    .infoAcomodar {
+        margin: 7rem 0 0 0 ;
+    }
+    .imgProducto2 {
+        margin-top: -15rem;
+    }
+
+    .navbar-toggler {
+        margin-right: 5rem;
+    }
+}
+
+@media (max-width:375px) {
+    html {
+        width: max-content;
+        max-width: 100rem;
+    }
+    header {
+        font-size: 3rem;
+    }
+    .marcaProductos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.95fr 1fr 1fr 1fr 1fr .05fr;
+        gap: 0px 0px;
+        width: max-content;
+        max-width: 100rem;
+      }
+    
+    body {
+        height: auto;
+        width: max-content;
+        max-width: 100rem;
+        margin: 0;
+        font-size: 50%;
+}
+
+.producto1 {
+    .info {
+        margin:0 10rem !important;
+    }
+    img {
+        margin:-10rem 10rem 0 10rem !important;
+    }
+}
+.infoAcomodar {
+    margin: 7rem 0 0 0 ;
+}
+.imgProducto2 {
+    margin-top: -15rem;
+}
+    footer {
+        p {
+            font-size: 1.5rem;
+            margin: 0 0 0 2rem;
+        }
+    }
+
+} 
