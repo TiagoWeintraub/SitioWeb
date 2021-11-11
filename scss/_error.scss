@@ -1,13 +1,19 @@
-.contenedor404 {
-    h1 {
+.contenedorGlob { 
+    grid-area: contenedorGlob;
+    width: 100%;
+    max-width: 100vw;
+    .h1404 {
+        font-size: 6rem;
+        color: #fff;
         text-align: center;
-        font-size: 4.5rem;
-        color: rgb(167, 10, 133);
+        margin: 10% auto 5% auto;
+        width: 90%;
     }
-
-    p {
+    .p404 {
+        font-size: 3rem;
+        color: #fff;
         text-align: center;
-        color: black;
-        font-size: 2rem;
+        margin: 0 auto 25% auto;
+        width: 50%;
     }
 }

@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     font-family: 'Noto Sans Display', sans-serif;
     list-style: none;
 }
@@ -101,30 +101,35 @@ footer {
     align-items: center;
     grid-area: marcas;
     text-align: center;
-    h1 {
+    .contenedorTextoMarcas {
+        width: max-content;
+        max-width: 100%;
+        h1 {
+        text-align: center;
         display: block;
         color: #fff;
         font-size: 6rem;
         font-weight: 600;
-    }
-    p {
-        width: 90rem;
-        text-align: center;
-        display: inline-block;
-        color: #fff;
-        font-size: 2.5rem;
-        margin: 2rem;
-        background-color: rgba(0, 0, 0, .6);
-    }
-    .productoPrincipal {
-        text-align: center;
-        color: #fff;
-        font-size: 4rem;
-        margin: 2rem;
-        font-weight: 600;
-        background-color: transparent !important;
-        display: inline-block;
-    }
+        }
+        p {
+            text-align: center;
+            display: inline-block;
+            color: #fff;
+            font-size: 2.5rem;
+            background-color: rgba(0, 0, 0, .6);
+            margin: 2rem auto;
+            padding: 1.5rem;
+        }
+        .productoPrincipal {
+            text-align: center;
+            color: #fff;
+            font-size: 4rem;
+            font-weight: 600;
+            background-color: transparent !important;
+            display: block;
+        }
+        }
+    
 }
 
 .productosGeneral {
@@ -146,9 +151,362 @@ footer {
     }
 }
 
+
 @import "index";
 @import "nosotros";
 @import "motorola";
 @import "apple";
 @import "samsung";
 @import "error"; 
+
+@media screen and (max-width: 768px){
+    body {
+        width: 100%;
+        max-width: 768px;
+        font-size: 2rem;
+        h1 {
+            font-size: 4rem;
+            width: 100% !important;
+            max-width: 768px !important;
+        }
+        h2 {
+            font-size: 2.5rem;
+            width: 100% !important;
+            max-width: 768px !important;
+        }
+        a {
+            font-size: 2rem ;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+    .divTituloMarca{
+        margin: 0 6rem;
+    }
+    .marcas {
+        .contenedorTextoMarcas {
+            p {
+                margin: 2rem auto;
+                font-size: 2rem;
+            }
+            h1 {
+                font-size: 4rem;
+                max-width: 80%;
+                margin:2rem  auto;
+            }
+            .productoPrincipal {
+                font-size: 3rem;
+            }
+        }
+    }
+    .h1Moto {
+        margin: 2rem 0;
+    }
+    .divMain {
+        width: 100%;
+        max-width: 768px;
+        h1 {
+            font-size: 4rem;
+            width: 80%;
+            max-width: 768px;
+            margin-left: 2rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            width: 100%;
+            max-width: 768px;
+        }
+    }
+    .productosGeneral {
+        .info {
+            margin: 2rem 7rem;
+            h2 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 2rem;
+            }
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .botonLanzamientos{
+        margin-top: 2rem;
+    }
+    /* PAG MOTOROLA */
+    .marcasMoto {
+        .info {
+            margin: 10rem;
+        }
+    }
+
+    .imgMoto1 {
+        margin: 0;
+        width: 50rem;
+    }
+    .imgMoto2 {
+        margin: 0;
+        width: 50rem;
+    }
+    .imgMoto3 {
+        margin: 0;
+        width: 50rem;
+    }
+    button {
+        margin-right:5rem;
+    }
+
+    .imgSam1{
+        width: 40rem;
+        margin: 2rem 5rem;
+    }
+    .imgSam2{
+        width: 40rem;
+    }
+    .imgSam3{
+        width: 55rem;
+        margin: 2rem -10rem 2rem -5rem;
+    }
+
+    .contenedorGlob { 
+        grid-area: contenedorGlob;
+        background-image: url(../multimedia/fondoNosotros.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        max-width: 768px;
+        h1 {
+            font-size: 6rem;
+            color: #fff;
+            text-align: center;
+            margin: 2rem auto;
+            width: 80%;
+        }
+        p {
+            font-size: 3rem;
+            color: #fff;
+            text-align: center;
+            margin:1rem auto;
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    body {
+        width: 100%;
+        max-width: 375px;
+        font-size: 2rem;
+        h1 {
+            font-size: 4rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+        a {
+            font-size: 1.5rem;
+            max-width: 100%;
+        }
+        p {
+            font-size: 2rem;
+        }
+        
+    }
+    button {
+        margin-right: 3rem;
+    }
+    .divTituloMarca{
+        margin: 0 6rem;
+        h3 {
+            font-size: 3.5rem;
+        }
+        p {
+            font-size: 2rem;
+            margin: 0;
+        }
+    }
+    .botonLanzamientos{
+        margin-top: 2rem;
+    }
+    .divMain {
+        width: 100%;
+        max-width: 375px;
+        h1 {
+            font-size: 4rem;
+            width: 80%;
+            max-width: 375px;
+            margin-left: 2rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            width: 100%;
+            max-width: 375px;
+        }
+    }
+    .contenedorMarcas {
+        .apple {
+            img {
+        margin: 0 !important;
+            }
+        }
+    } 
+    .contenedorPrincipal {
+        max-width: 375px;
+    }
+    .imagen {
+        width: 85%;
+    }
+    .contenedorMarcas {
+        .motorola img {
+            height: 30rem;
+        }
+        
+        .samsung img {
+            height: 30rem;
+        }
+    
+        .apple img {
+            height: 30rem;
+            margin: 0;
+        }
+    }
+    footer {
+        p {
+            margin: 0;
+        }
+    }
+
+    /* PÁG MOTOROLA */
+    .marcaProductos2 {
+        width: 100%;
+        max-width: 375px;
+    }
+    .marcasMoto {
+        width: 100%;
+        max-width: 375px;
+    }
+    .marcas {
+        .contenedorTextoMarcas {
+            width: max-content;
+            max-width: 375px;
+            p {
+                margin: 2rem auto;
+            }
+        }
+    }
+    .imgMoto1 {
+        margin: 0;
+        width: 35rem;
+    }
+    .imgMoto2 {
+        margin: 0;
+        width: 35rem;
+    }
+    .imgMoto3 {
+        margin: 0;
+        width: 35rem;
+    }
+    .marcaProductos2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.95fr .5fr .5fr .5fr .05fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+    "marcas marcas marcas"
+    "productoMoto1 productoMoto1 productoMoto1"
+    "productoMoto2 productoMoto2 productoMoto2"
+    "productoMoto3 productoMoto3 productoMoto3"
+    "footer footer footer";
+    }
+    .productosGeneral {
+        .info {
+            h2 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 2rem;
+            }
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .marcas {
+        .contenedorTextoMarcas {
+            p {
+                margin: 2rem auto;
+                font-size: 2rem;
+            }
+            h1 {
+                font-size: 4rem;
+            }
+            .productoPrincipal {
+                font-size: 3rem;
+            }
+        }
+    }
+    .imgProdIphone13 {
+        width: 22rem !important;
+    }
+    .imgProducto {
+        width: 25rem;
+        margin: 2.5rem;
+    }
+    .imgProducto2 {
+        width: 25rem;
+        margin: 2.5rem;
+    }
+
+    /* APPLE */
+    .marcaProductos {
+        width: max-content;
+        max-width: 375px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.95fr .5fr .5fr .5fr .5fr .05fr;
+    }
+
+    /* SAMSUNG */
+    .marcaProductos3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: .65fr .9fr .9fr .9fr .05fr;
+    }
+    .imgSam1{
+        width: 35rem;
+        margin: 2rem ;
+    }
+    .imgSam2{
+        width: 35rem;
+    }
+    .imgSam3{
+        width: 36rem;
+        margin: 0;
+    }
+    
+.contenedorGlob { 
+    grid-area: contenedorGlob;
+    background-image: url(../multimedia/fondoNosotros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 375px;
+    h1 {
+        font-size: 4rem;
+        color: #fff;
+        text-align: center;
+        margin: 2rem auto;
+        width: 80%;
+    }
+    p {
+        font-size: 2rem;
+        color: #fff;
+        text-align: center;
+        margin:1rem auto;
+    }
+}
+}

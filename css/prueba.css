@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   font-family: 'Noto Sans Display', sans-serif;
   list-style: none; }
 
@@ -77,27 +77,30 @@ footer {
   align-items: center;
   grid-area: marcas;
   text-align: center; }
-  .marcas h1 {
-    display: block;
-    color: #fff;
-    font-size: 6rem;
-    font-weight: 600; }
-  .marcas p {
-    width: 90rem;
-    text-align: center;
-    display: inline-block;
-    color: #fff;
-    font-size: 2.5rem;
-    margin: 2rem;
-    background-color: rgba(0, 0, 0, 0.6); }
-  .marcas .productoPrincipal {
-    text-align: center;
-    color: #fff;
-    font-size: 4rem;
-    margin: 2rem;
-    font-weight: 600;
-    background-color: transparent !important;
-    display: inline-block; }
+  .marcas .contenedorTextoMarcas {
+    width: max-content;
+    max-width: 100%; }
+    .marcas .contenedorTextoMarcas h1 {
+      text-align: center;
+      display: block;
+      color: #fff;
+      font-size: 6rem;
+      font-weight: 600; }
+    .marcas .contenedorTextoMarcas p {
+      text-align: center;
+      display: inline-block;
+      color: #fff;
+      font-size: 2.5rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 2rem auto;
+      padding: 1.5rem; }
+    .marcas .contenedorTextoMarcas .productoPrincipal {
+      text-align: center;
+      color: #fff;
+      font-size: 4rem;
+      font-weight: 600;
+      background-color: transparent !important;
+      display: block; }
 
 .productosGeneral {
   display: flex;
@@ -122,7 +125,8 @@ footer {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .imagen {
   width: 60rem;
@@ -138,12 +142,14 @@ footer {
   font-size: 1.5rem;
   /* OPERACIONES CON UNA VARIABLE */ }
   .divMain h1 {
+    width: 100%;
     margin-top: 0rem;
     font-size: 8rem;
     padding-bottom: 1rem;
     color: #ffff;
     text-shadow: 0 0 2rem #a70a85, 0 0 20px #a70a85, 0 0 2rem #a70a85, 0 0 2rem #a70a85; }
   .divMain h2 {
+    width: 100%;
     display: block;
     font-size: 4rem;
     width: 60rem;
@@ -187,8 +193,6 @@ footer {
   background-attachment: fixed;
   background-size: cover;
   color: #ffff; }
-  .samsung .divTituloMarca h3 {
-    color: #ffff; }
 
 .contenedorMarcas {
   display: grid;
@@ -207,11 +211,11 @@ footer {
     margin-top: 3rem; }
   .contenedorMarcas .apple img {
     height: 53rem;
-    margin: 3rem -5rem 0 -3rem; }
+    margin: 0; }
 
 .fotoMarca {
   transition: all .35s;
-  height: 600px; }
+  height: 60rem; }
   .fotoMarca:hover {
     transform: scale(0.975, 0.975);
     transition: all .5s;
@@ -234,18 +238,19 @@ footer {
   text-align: center;
   font-size: 2rem; }
   .divTituloMarca p {
-    margin-top: 3.75rem;
+    color: #ffff;
+    margin: 3.75rem 0 0 0;
     font-size: 3rem; }
   .divTituloMarca h3 {
     font-size: 7rem;
-    color: #0b090a; }
+    color: #ffff; }
 
 .motorola {
   grid-area: moto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-image: url(https://www.wallpapertip.com/wmimgs/91-918967_thumb-image-transparent-abstract-background-png.png);
+  background-image: url(../multimedia/fondoAzul.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; }
@@ -260,140 +265,34 @@ article {
     text-decoration: none;
     padding: 1.6rem; }
 
-@media (max-width: 768px) {
-  .botonLanzamientos {
-    margin-top: 1rem; }
-  .divMain {
-    margin-bottom: 2rem; }
-    .divMain h1 {
-      margin-top: 5rem; }
-  .contenedorMarcas .apple img {
-    margin: 3rem 20rem 0 20rem; }
-  .divTituloMarca {
-    margin-top: 0rem; }
-    .divTituloMarca p {
-      margin-top: 0; }
-  .imagen:hover {
-    transform: none; }
-  .navbar-toggler {
-    margin-right: 5rem; } }
-
-@media (max-width: 375px) {
-  header {
-    font-size: 2rem; }
-  body {
-    height: auto;
-    width: max-content;
-    max-width: 60rem;
-    margin: 0;
-    font-size: 50%; }
-  h2 ul li {
-    margin-left: 5rem;
-    font-size: 100%; }
-  .divMain {
-    margin-bottom: 2rem; }
-    .divMain h1 {
-      font-size: 6rem;
-      margin-left: 6rem;
-      margin-top: 5rem; }
-  .divTituloMarca {
-    margin-top: 0rem; }
-    .divTituloMarca p {
-      margin-top: 0; }
-  .imagen {
-    width: 55rem; }
-    .imagen:hover {
-      transform: none; }
-  .botonLanzamientos {
-    margin-top: 1rem; }
-    .botonLanzamientos a {
-      font-size: 100%; }
-  .contenedorMarcas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: max-content;
-    max-width: 60rem; }
-    .contenedorMarcas .divTituloMarca {
-      height: 15rem; }
-    .contenedorMarcas .apple img {
-      margin-top: 15rem; }
-    .contenedorMarcas .motorola img {
-      height: 55rem;
-      margin-top: 12rem; }
-    .contenedorMarcas .samsung img {
-      height: 55rem;
-      margin-top: 12rem; }
-  .navbar-toggler {
-    margin-right: 5rem; }
-  footer p {
-    font-size: 1.5rem;
-    margin: 0 0 0 2rem; } }
-
-body {
+.contenedorGlobal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.8fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "contenedorGlob contenedorGlob contenedorGlob" "footer footer footer";
   background-image: url(../multimedia/fondoNosotros.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
 
-.footerNos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "footer footer footer"; }
-
-.footer {
-  grid-area: footer; }
-
-nav .logoInsta {
-  width: 60px;
-  margin: 1.5rem 4rem 1.5rem 1.5rem;
-  transition: all .35s; }
-  nav .logoInsta:hover {
-    transform: rotateY(180deg);
-    transition: all .35s; }
-
-p {
-  text-align: center;
-  margin: 0 0 0 15rem;
-  font-size: 2rem !important;
-  color: #ffff; }
-
-.contenedorNosotros {
-  height: 100vh;
-  text-align: center; }
-  .contenedorNosotros h1 {
-    margin: 5rem 0 3rem 0;
-    display: block;
-    font-size: 5rem;
-    color: #fff; }
-  .contenedorNosotros .contenedorPresentación {
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: center; }
-    .contenedorNosotros .contenedorPresentación p {
-      margin: 3rem 5rem 3rem 5rem;
-      font-size: 2.5rem;
-      color: #fff; }
-
-@media (max-width: 375px) {
-  html {
-    width: max-content;
-    max-width: 37.5rem; }
-  header {
-    font-size: 3rem; }
-  .contenedorNosotros h1 {
-    margin: 3rem; }
-  .contenedorPresentación {
-    margin: 0; }
-  footer p {
-    font-size: 1.5rem;
-    margin: 0 0 0 2rem; } }
+.contenedorGlob {
+  grid-area: contenedorGlob;
+  width: 100%;
+  max-width: 100vw; }
+  .contenedorGlob h1 {
+    font-size: 6rem;
+    color: #fff;
+    text-align: center;
+    margin: 2rem auto;
+    width: 80%; }
+  .contenedorGlob p {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin: 2rem auto;
+    width: 50%; }
 
 .marcaProductos2 {
   display: grid;
@@ -407,13 +306,17 @@ p {
   margin: 7rem 1rem 1rem 1.5rem; }
 
 .imgMoto1 {
-  width: 65rem; }
+  width: 50rem;
+  margin-top: 5rem; }
 
 .imgMoto2 {
-  width: 75rem; }
+  width: 50rem;
+  margin-right: -11rem;
+  margin-left: 5rem; }
 
 .imgMoto3 {
-  width: 50rem; }
+  width: 50rem;
+  margin-left: 12.5rem; }
 
 .marcasMoto {
   background-image: url(../multimedia/fondoOsc2.jpg);
@@ -427,12 +330,10 @@ p {
   background-image: url(../multimedia/fondo-naranja-textura.png);
   background-size: cover;
   background-repeat: no-repeat; }
-  .productoMoto1 img {
-    margin-top: 5rem; }
 
 .productoMoto2 {
   grid-area: productoMoto2;
-  background-image: url(../multimedia/fondoOsc2.jpg);
+  background-image: url(../multimedia/fondoGris.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -442,75 +343,25 @@ p {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.infoAcomodar {
-  margin: 2rem 0 0 15rem; }
-
 .info h2 {
   font-size: 5rem;
   color: #fff; }
 
 .info p {
-  font-size: 3.5rem;
-  color: #fff; }
+  font-size: 3.5rem; }
 
 .info a {
   font-size: 2.5rem;
   color: #fff; }
 
-@media (max-width: 768px) {
-  header {
-    font-size: 3rem; }
-  .marcaProductos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
-    gap: 0px 0px;
-    width: max-content;
-    max-width: 150rem; }
-  body {
-    height: auto;
-    width: max-content;
-    max-width: 150rem; }
-  .botonLanzamientos {
-    margin-top: 1rem; }
-  .productoMoto1 .info {
-    margin: 0 10rem 0 0rem; }
-  .infoAcomodar {
-    margin: 7rem 0 0 0; }
-    .infoAcomodar .navbar-toggler {
-      margin-right: 5rem; } }
-
-@media (max-width: 375px) {
-  html {
-    width: 375px;
-    max-width: 375px; }
-  header {
-    font-size: 3rem; }
-  .marcaProductos {
-    width: max-content;
-    max-width: 100rem; }
-  body {
-    height: auto;
-    width: max-content;
-    max-width: 375px;
-    margin: 0;
-    font-size: 50%; } }
-
-.productoMoto1 .info {
-  margin: 0 10rem; }
-
-.productoMoto1 img {
-  margin: -5rem 0 0 0; }
-
-.infoAcomodar {
-  margin: 7rem 0 0 0; }
-
-.imgMoto3 {
-  margin: 0 10rem 0 10rem; }
-
-footer p {
-  font-size: 1.5rem;
-  margin: 0 0 0 2rem; }
+@media screen and (max-width: 1024px) {
+  .imgMoto2 {
+    width: 50rem;
+    margin-right: 0;
+    margin-left: 0; }
+  .imgMoto3 {
+    width: 50rem;
+    margin: 7rem; } }
 
 .marcaProductos {
   display: grid;
@@ -524,13 +375,15 @@ footer p {
   margin: 7rem 1rem 1rem 1.5rem; }
 
 .imgProdIphone13 {
-  width: 45rem !important; }
+  width: 42rem !important; }
 
 .imgProducto {
-  width: 70rem; }
+  width: 45rem;
+  margin: 2.5rem; }
 
 .imgProducto2 {
-  width: 80rem; }
+  width: 45rem;
+  margin: 2.5rem; }
 
 .marcasApple {
   background-image: url(https://www.gadgetsinnepal.com.np/wp-content/uploads/2021/09/iPhone-13-mini-official-price-in-Nepal-1-1200x688.jpg);
@@ -563,9 +416,6 @@ footer p {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.infoAcomodar {
-  margin: 2rem 0 0 15rem; }
-
 .info h2 {
   font-size: 5rem;
   color: #fff; }
@@ -577,64 +427,6 @@ footer p {
 .info a {
   font-size: 2.5rem;
   color: #fff; }
-
-@media (max-width: 768px) {
-  header {
-    font-size: 3rem; }
-  .marcaProductos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.95fr 1fr 1fr 1fr 1fr .05fr;
-    gap: 0px 0px;
-    width: max-content;
-    max-width: 150rem; }
-  body {
-    height: auto;
-    width: max-content;
-    max-width: 150rem; }
-  .botonLanzamientos {
-    margin-top: 1rem; }
-  .producto1 .info {
-    margin: 0 10rem !important; }
-  .producto1 img {
-    margin: -10rem 10rem 0 10rem !important; }
-  .infoAcomodar {
-    margin: 7rem 0 0 0; }
-  .imgProducto2 {
-    margin-top: -15rem; }
-  .navbar-toggler {
-    margin-right: 5rem; } }
-
-@media (max-width: 375px) {
-  html {
-    width: max-content;
-    max-width: 100rem; }
-  header {
-    font-size: 3rem; }
-  .marcaProductos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.95fr 1fr 1fr 1fr 1fr .05fr;
-    gap: 0px 0px;
-    width: max-content;
-    max-width: 100rem; }
-  body {
-    height: auto;
-    width: max-content;
-    max-width: 100rem;
-    margin: 0;
-    font-size: 50%; }
-  .producto1 .info {
-    margin: 0 10rem !important; }
-  .producto1 img {
-    margin: -10rem 10rem 0 10rem !important; }
-  .infoAcomodar {
-    margin: 7rem 0 0 0; }
-  .imgProducto2 {
-    margin-top: -15rem; }
-  footer p {
-    font-size: 1.5rem;
-    margin: 0 0 0 2rem; } }
 
 .marcaProductos3 {
   display: grid;
@@ -651,7 +443,7 @@ footer p {
   width: 40rem; }
 
 .imgSam2 {
-  width: 53rem; }
+  width: 40rem; }
 
 .imgSam3 {
   width: 55rem;
@@ -682,9 +474,6 @@ footer p {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.infoAcomodar {
-  margin: 2rem 0 0 15rem; }
-
 .info h2 {
   font-size: 5rem;
   color: #fff; }
@@ -697,67 +486,254 @@ footer p {
   font-size: 2.5rem;
   color: #fff; }
 
-@media (max-width: 768px) {
-  header {
+.contenedorGlob {
+  grid-area: contenedorGlob;
+  width: 100%;
+  max-width: 100vw; }
+  .contenedorGlob .h1404 {
+    font-size: 6rem;
+    color: #fff;
+    text-align: center;
+    margin: 10% auto 5% auto;
+    width: 90%; }
+  .contenedorGlob .p404 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto 25% auto;
+    width: 50%; }
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    max-width: 768px;
+    font-size: 2rem; }
+    body h1 {
+      font-size: 4rem;
+      width: 100% !important;
+      max-width: 768px !important; }
+    body h2 {
+      font-size: 2.5rem;
+      width: 100% !important;
+      max-width: 768px !important; }
+    body a {
+      font-size: 2rem; }
+    body p {
+      font-size: 2rem; }
+  .divTituloMarca {
+    margin: 0 6rem; }
+  .marcas .contenedorTextoMarcas p {
+    margin: 2rem auto;
+    font-size: 2rem; }
+  .marcas .contenedorTextoMarcas h1 {
+    font-size: 4rem;
+    max-width: 80%;
+    margin: 2rem  auto; }
+  .marcas .contenedorTextoMarcas .productoPrincipal {
     font-size: 3rem; }
-  .marcaProductos {
+  .h1Moto {
+    margin: 2rem 0; }
+  .divMain {
+    width: 100%;
+    max-width: 768px; }
+    .divMain h1 {
+      font-size: 4rem;
+      width: 80%;
+      max-width: 768px;
+      margin-left: 2rem; }
+    .divMain h2 {
+      font-size: 2.5rem;
+      width: 100%;
+      max-width: 768px; }
+  .productosGeneral .info {
+    margin: 2rem 7rem; }
+    .productosGeneral .info h2 {
+      font-size: 2.5rem; }
+    .productosGeneral .info p {
+      font-size: 2rem; }
+    .productosGeneral .info a {
+      font-size: 1.5rem; }
+  .botonLanzamientos {
+    margin-top: 2rem; }
+  /* PAG MOTOROLA */
+  .marcasMoto .info {
+    margin: 10rem; }
+  .imgMoto1 {
+    margin: 0;
+    width: 50rem; }
+  .imgMoto2 {
+    margin: 0;
+    width: 50rem; }
+  .imgMoto3 {
+    margin: 0;
+    width: 50rem; }
+  button {
+    margin-right: 5rem; }
+  .imgSam1 {
+    width: 40rem;
+    margin: 2rem 5rem; }
+  .imgSam2 {
+    width: 40rem; }
+  .imgSam3 {
+    width: 55rem;
+    margin: 2rem -10rem 2rem -5rem; }
+  .contenedorGlob {
+    grid-area: contenedorGlob;
+    background-image: url(../multimedia/fondoNosotros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 768px; }
+    .contenedorGlob h1 {
+      font-size: 6rem;
+      color: #fff;
+      text-align: center;
+      margin: 2rem auto;
+      width: 80%; }
+    .contenedorGlob p {
+      font-size: 3rem;
+      color: #fff;
+      text-align: center;
+      margin: 1rem auto; } }
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+    max-width: 375px;
+    font-size: 2rem; }
+    body h1 {
+      font-size: 4rem; }
+    body h2 {
+      font-size: 2.5rem; }
+    body a {
+      font-size: 1.5rem;
+      max-width: 100%; }
+    body p {
+      font-size: 2rem; }
+  button {
+    margin-right: 3rem; }
+  .divTituloMarca {
+    margin: 0 6rem; }
+    .divTituloMarca h3 {
+      font-size: 3.5rem; }
+    .divTituloMarca p {
+      font-size: 2rem;
+      margin: 0; }
+  .botonLanzamientos {
+    margin-top: 2rem; }
+  .divMain {
+    width: 100%;
+    max-width: 375px; }
+    .divMain h1 {
+      font-size: 4rem;
+      width: 80%;
+      max-width: 375px;
+      margin-left: 2rem; }
+    .divMain h2 {
+      font-size: 2.5rem;
+      width: 100%;
+      max-width: 375px; }
+  .contenedorMarcas .apple img {
+    margin: 0 !important; }
+  .contenedorPrincipal {
+    max-width: 375px; }
+  .imagen {
+    width: 85%; }
+  .contenedorMarcas .motorola img {
+    height: 30rem; }
+  .contenedorMarcas .samsung img {
+    height: 30rem; }
+  .contenedorMarcas .apple img {
+    height: 30rem;
+    margin: 0; }
+  footer p {
+    margin: 0; }
+  /* PÁG MOTOROLA */
+  .marcaProductos2 {
+    width: 100%;
+    max-width: 375px; }
+  .marcasMoto {
+    width: 100%;
+    max-width: 375px; }
+  .marcas .contenedorTextoMarcas {
+    width: max-content;
+    max-width: 375px; }
+    .marcas .contenedorTextoMarcas p {
+      margin: 2rem auto; }
+  .imgMoto1 {
+    margin: 0;
+    width: 35rem; }
+  .imgMoto2 {
+    margin: 0;
+    width: 35rem; }
+  .imgMoto3 {
+    margin: 0;
+    width: 35rem; }
+  .marcaProductos2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
+    grid-template-rows: 0.95fr .5fr .5fr .5fr .05fr;
     gap: 0px 0px;
-    width: max-content;
-    max-width: 150rem; }
-  body {
-    height: auto;
-    width: max-content;
-    max-width: 150rem; }
-  .botonLanzamientos {
-    margin-top: 1rem; }
-  .productoSam1 .info {
-    margin: 0 10rem 0 0rem; }
-  .infoAcomodar {
-    margin: 7rem 0 0 0; }
-    .infoAcomodar .navbar-toggler {
-      margin-right: 5rem; } }
-
-@media (max-width: 375px) {
-  html {
-    width: max-content;
-    max-width: 100rem; }
-  header {
+    grid-auto-flow: row;
+    grid-template-areas: "marcas marcas marcas" "productoMoto1 productoMoto1 productoMoto1" "productoMoto2 productoMoto2 productoMoto2" "productoMoto3 productoMoto3 productoMoto3" "footer footer footer"; }
+  .productosGeneral .info h2 {
+    font-size: 2.5rem; }
+  .productosGeneral .info p {
+    font-size: 2rem; }
+  .productosGeneral .info a {
+    font-size: 1.5rem; }
+  .marcas .contenedorTextoMarcas p {
+    margin: 2rem auto;
+    font-size: 2rem; }
+  .marcas .contenedorTextoMarcas h1 {
+    font-size: 4rem; }
+  .marcas .contenedorTextoMarcas .productoPrincipal {
     font-size: 3rem; }
+  .imgProdIphone13 {
+    width: 22rem !important; }
+  .imgProducto {
+    width: 25rem;
+    margin: 2.5rem; }
+  .imgProducto2 {
+    width: 25rem;
+    margin: 2.5rem; }
+  /* APPLE */
   .marcaProductos {
     width: max-content;
-    max-width: 100rem; }
-  body {
-    height: auto;
-    width: max-content;
-    max-width: 100rem;
-    margin: 0;
-    font-size: 50%; } }
-
-.productoSam1 .info {
-  margin: 0 10rem; }
-
-.productoSam1 img {
-  margin: -5rem 0 0 0; }
-
-.infoAcomodar {
-  margin: 7rem 0 0 0; }
-
-.imgSam3 {
-  margin: 0 10rem 0 10rem; }
-
-footer p {
-  font-size: 1.5rem;
-  margin: 0 0 0 2rem; }
-
-.contenedor404 h1 {
-  text-align: center;
-  font-size: 4.5rem;
-  color: #a70a85; }
-
-.contenedor404 p {
-  text-align: center;
-  color: black;
-  font-size: 2rem; }
+    max-width: 375px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.95fr .5fr .5fr .5fr .5fr .05fr; }
+  /* SAMSUNG */
+  .marcaProductos3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .65fr .9fr .9fr .9fr .05fr; }
+  .imgSam1 {
+    width: 35rem;
+    margin: 2rem; }
+  .imgSam2 {
+    width: 35rem; }
+  .imgSam3 {
+    width: 36rem;
+    margin: 0; }
+  .contenedorGlob {
+    grid-area: contenedorGlob;
+    background-image: url(../multimedia/fondoNosotros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 375px; }
+    .contenedorGlob h1 {
+      font-size: 4rem;
+      color: #fff;
+      text-align: center;
+      margin: 2rem auto;
+      width: 80%; }
+    .contenedorGlob p {
+      font-size: 2rem;
+      color: #fff;
+      text-align: center;
+      margin: 1rem auto; } }

@@ -16,13 +16,17 @@
     margin: 7rem 1rem 1rem 1.5rem;
 }
 .imgMoto1{
-    width: 65rem;
+    width: 50rem;
+    margin-top: 5rem;
 }
 .imgMoto2{
-    width: 75rem;
+    width: 50rem;
+    margin-right: -11rem;
+    margin-left: 5rem;
 }
 .imgMoto3{
     width: 50rem;
+    margin-left: 12.5rem;
 }
 .marcasMoto {
     background-image: url(../multimedia/fondoOsc2.jpg);
@@ -37,14 +41,11 @@
     background-image: url(../multimedia/fondo-naranja-textura.png );
     background-size: cover;
     background-repeat: no-repeat;
-    img {
-        margin-top: 5rem  ;
-    }
 }
   
   .productoMoto2 { 
     grid-area: productoMoto2;
-    background-image: url(../multimedia/fondoOsc2.jpg );
+    background-image: url(../multimedia/fondoGris.jpg );
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -56,9 +57,6 @@
     background-repeat: no-repeat;
 }
 
-  .infoAcomodar {
-      margin: 2rem 0 0 15rem;
-  }
 
   .info {
     h2 {
@@ -67,7 +65,7 @@
     }
     p {
         font-size: 3.5rem;
-        color: #fff;
+        
     }
     a {
         font-size: 2.5rem;
@@ -75,88 +73,15 @@
     }
 }
 
-
-
-
-@media (max-width:768px) {
-    header {
-        font-size: 3rem;
+@media screen and (max-width: 1024px) {
+    .imgMoto2{
+        width: 50rem;
+        margin-right: 0;
+        margin-left: 0;
     }
-    .marcaProductos {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.95fr 1fr 1fr 1fr .05fr;
-        gap: 0px 0px;
-        width: max-content;
-        max-width: 150rem;
-      }
-    
-    body {
-        height: auto;
-        width: max-content;
-        max-width: 150rem;
-    }
-    .botonLanzamientos {
-        margin-top: 1rem;
-    }
-
-    .productoMoto1 {
-        .info {
-            margin:0 10rem 0 0rem;
-        }
-    }
-    .infoAcomodar {
-        margin: 7rem 0 0 0 ;
-
-
-    .navbar-toggler {
-        margin-right: 5rem;
+    .imgMoto3{
+        width: 50rem;
+        margin: 7rem;
     }
 }
-}
-
-@media (max-width:375px) {
-    html {
-        width: 375px;
-        max-width: 375px;
-    }
-    header {
-        font-size: 3rem;
-    }
-    .marcaProductos {
-        width: max-content;
-        max-width: 100rem;
-      }
-    
-    body {
-        height: auto;
-        width: max-content;
-        max-width: 375px;
-        margin: 0;
-        font-size: 50%;
-}
-}
-.productoMoto1 {
-    .info {
-        margin:0 10rem ;
-    }
-    img {
-        margin:-5rem 0 0 0 ;
-    }
-}
-.infoAcomodar {
-    margin: 7rem 0 0 0 ;
-}
-.imgMoto3 {
-    margin: 0 10rem 0 10rem;
-}
-    footer {
-        p {
-            font-size: 1.5rem;
-            margin: 0 0 0 2rem;
-        }
-    }
-
-
-
 
