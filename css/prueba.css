@@ -510,12 +510,13 @@ article {
     font-size: 2rem; }
     body h1 {
       font-size: 4rem;
-      width: 100% !important;
-      max-width: 768px !important; }
+      width: 100%;
+      max-width: 768px !important;
+      text-align: center; }
     body h2 {
       font-size: 2.5rem;
-      width: 100% !important;
-      max-width: 768px !important; }
+      width: 100%;
+      max-width: 768px; }
     body a {
       font-size: 2rem; }
     body p {
@@ -537,14 +538,13 @@ article {
     width: 100%;
     max-width: 768px; }
     .divMain h1 {
-      font-size: 4rem;
-      width: 80%;
-      max-width: 768px;
-      margin-left: 2rem; }
+      font-size: 7rem;
+      max-width: 80%;
+      margin: 2rem  auto; }
     .divMain h2 {
-      font-size: 2.5rem;
-      width: 100%;
-      max-width: 768px; }
+      font-size: 3.5rem;
+      max-width: 80%;
+      margin: 2rem 0 2rem 10.5rem; }
   .productosGeneral .info {
     margin: 2rem 7rem; }
     .productosGeneral .info h2 {
@@ -629,11 +629,12 @@ article {
       font-size: 4rem;
       width: 80%;
       max-width: 375px;
-      margin-left: 2rem; }
+      margin: 2rem auto; }
     .divMain h2 {
       font-size: 2.5rem;
-      width: 100%;
-      max-width: 375px; }
+      width: 80%;
+      max-width: 375px;
+      margin: 1rem 0 1rem 2rem; }
   .contenedorMarcas .apple img {
     margin: 0 !important; }
   .contenedorPrincipal {

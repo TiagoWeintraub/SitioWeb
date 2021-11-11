@@ -166,13 +166,14 @@ footer {
         font-size: 2rem;
         h1 {
             font-size: 4rem;
-            width: 100% !important;
+            width: 100%;
             max-width: 768px !important;
+            text-align: center;
         }
         h2 {
             font-size: 2.5rem;
-            width: 100% !important;
-            max-width: 768px !important;
+            width: 100% ;
+            max-width: 768px;
         }
         a {
             font-size: 2rem ;
@@ -207,15 +208,14 @@ footer {
         width: 100%;
         max-width: 768px;
         h1 {
-            font-size: 4rem;
-            width: 80%;
-            max-width: 768px;
-            margin-left: 2rem;
+            font-size: 7rem ;
+            max-width: 80% ;
+            margin: 2rem  auto ;
         }
         h2 {
-            font-size: 2.5rem;
-            width: 100%;
-            max-width: 768px;
+            font-size: 3.5rem;
+            max-width: 80%;
+            margin: 2rem 0 2rem 10.5rem ;
         }
     }
     .productosGeneral {
@@ -337,12 +337,13 @@ footer {
             font-size: 4rem;
             width: 80%;
             max-width: 375px;
-            margin-left: 2rem;
+            margin:2rem auto;
         }
         h2 {
             font-size: 2.5rem;
-            width: 100%;
+            width: 80%;
             max-width: 375px;
+            margin: 1rem 0 1rem 2rem;
         }
     }
     .contenedorMarcas {
